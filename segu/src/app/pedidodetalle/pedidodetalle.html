@@ -1,0 +1,27 @@
+<div class="header">
+  <!--header------------------->
+
+  <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo" />
+  </div>
+  <div class="titulo">
+    <p>Press Start</p>
+  </div>
+  <div class="botones">
+    <button class="btn" routerLink="/tienda">
+      <img class="icon" src="volver.png" alt="" />
+    </button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="ped">
+    <h2 class="pedt">Detalles del pedido</h2>
+    <ul class="pedtable">
+      <li *ngFor="let detalle of detalles">
+        {{ detalle.nombre }} - ${{ detalle.precio }}
+      </li>
+    </ul>
+    <div class="tot">Total: ${{total}}</div>
+  </div>
+</div>

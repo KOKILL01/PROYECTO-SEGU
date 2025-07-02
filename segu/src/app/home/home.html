@@ -1,0 +1,59 @@
+<div class="header"> <!--header------------------->
+
+    <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo">
+  </div>
+    <div class="titulo">
+        <p>Press Start
+        </p>
+    </div>
+    <div class="botones">
+        <button class="btn" routerLink="/loguin"><img class="icon" src="usuario3.png" alt=""></button>
+        
+            <button class="btn" routerLink="/carrito"><img class="icon" src="car.png" alt=""></button>
+            <p class="btn" routerLink="/adminp">btn3</p>
+        
+    </div>
+
+</div>
+
+
+<div class="main"> <!--clase de venta------------------>
+
+    <p>ventas</p>
+
+    <div class="carteles" >
+
+        
+        <div class="cartel" *ngFor="let prod of productos" [routerLink]="['/detalles', prod.id]">
+            <div class="imagen">
+                <img class="im" [src]="prod.imagen" alt="">
+            </div>
+            <div class="prodName">
+                {{prod.nombre}}
+            </div>
+            <div class="descripcion">
+                {{prod.descripcion}}
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="izq">
+        Derechos reservados Press Start A.C de C.V <br> <br>
+
+        Press Start 
+    </div>
+    <div class="izq">
+        Ubicados en: <br> Aguascalientes,mx. <br> Guadalajara,Jalisco <br> Mexico City <br> Monterrey <br>
+    </div>
+    <div class="izq">
+        Dudas o aclaraciones:  <br>
+        449 3871833
+    </div>
+</div>

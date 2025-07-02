@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa logo y botones */
+  background-color: #2d78a7;
+  height: 10vh; /* 10% de la altura de la pantalla */
+  padding: 0 20px;
+  position: relative;
+  margin: 10px;
+}
+
+.logo {
+  
+  width: 15%;
+}
+
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  color: rgb(6, 9, 39); /* Color neón base */
+      text-shadow:
+        0 10px 50px rgb(119, 245, 241),
+        0 0 10px rgb(42, 255, 230),
+        0 0 20px rgb(0, 242, 255),
+        0 0 40px #0ff,
+        10px 10px 80px rgb(239, 1, 1);
+      animation: parpadeo 1.5s infinite alternate;
+  
+}
+
+.botones {
+  color: white;
+  display: flex;
+  
+}
+
+.btn {
+  margin: 2px;
+  border:1px solid rgb(12, 80, 176);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  
+}
+.icon{
+  background-color: transparent;
+  height: 30px; /* o el tamaño que quieras */
+  width: auto;
+  mix-blend-mode: multiply;
+  
+}
+
+
+.l {
+  border-radius: 10px;
+  height: 100%;
+  width: 90%;
+  object-fit: contain; /* o 'cover' según lo que prefieras */
+}
+
+
+.main {
+    background-color: #77a9c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  height: 86vh; /* Ocupa toda la pantalla */
+}
+
+.log {
+  background-color: #a9cce2;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 40%;
+  min-height: 50%;
+  text-align: center;
+}
+
+.recuadro {
+  margin-top: 15px;
+  background-color: #d1edff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  background-color: #d1edff;
+  border: none;
+  text-align: center;
+  width: 100%;
+  border: solid black 1px;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Asegura que padding no rompa el ancho */
+}
+
+.camb{
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bt{
+  padding: 6px;
+  border-radius: 5px;
+  margin: 10px;
+}

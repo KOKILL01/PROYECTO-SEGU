@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo">
+  </div>
+  <div class="titulo">Press Start</div>
+  
+  <div class="botones">
+    <div class="btn" routerLink="/home"><img class="icon" src="hogar.png" alt=""></div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="log">
+
+    <form (ngSubmit)="registrar()">
+    <h1>Registrare!</h1>
+
+    <div class="recuadro">
+      <input name="email"  type="text" [(ngModel)]="correo" placeholder="Correo electronico" />
+    </div>
+    <div class="recuadro">
+      <input name="Nombre"  type="text" [(ngModel)]="nombre" placeholder="Nombre de usuario" />
+    </div>
+    <div class="recuadro">
+      <input name="contraseña"  type="text" [(ngModel)]="contra" placeholder="Contraseña" />
+    </div>
+
+
+    <button class="btnEntrar" >registrar</button>
+    </form>
+    
+    <div class="link">
+      <a routerLink="/loguin">Inicia sesion aqui...</a>
+    </div>
+  </div>
+</div>

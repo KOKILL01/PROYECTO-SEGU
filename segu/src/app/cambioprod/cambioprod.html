@@ -1,0 +1,43 @@
+<div class="header">
+  <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo">
+  </div>
+  <div class="titulo">Press Start</div>
+  
+  <div class="botones">
+    <div class="btn" routerLink="/adminP"><img class="icon" src="volver.png" alt=""></div>
+  </div>
+</div>
+
+
+<div class="main">
+  <div class="log">
+    
+    <h2>Editar Producto</h2>
+
+    <div class="recuadro">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="producto.nombre">
+    </div>  
+    <div class="recuadro">
+      <label>Precio:</label>
+      <input type="text" [(ngModel)]="producto.precio">
+    </div>  
+          
+    <div class="recuadro">
+      <label>Descripción:</label>
+      <input class='camb' type="text" [(ngModel)]="producto.descripcion">
+    </div>
+
+      
+  <button class="bt" (click)="guardarCambios()">Guardar Cambios</button>
+  <button class="bt" (click)="eliminarProducto()">Eliminar Producto</button>
+
+  </div>
+</div>
+
+
+
+
+
+

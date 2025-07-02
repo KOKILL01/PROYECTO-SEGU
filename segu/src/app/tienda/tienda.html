@@ -1,0 +1,55 @@
+<div class="header">
+  <!--header------------------->
+
+  <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo" />
+  </div>
+  <div class="titulo">
+    <p>Press Start</p>
+  </div>
+  <div class="botones">
+    <button class="btn" routerLink="/nptienda">
+      <img class="icon" src="nprod.png" alt="" />
+    </button>
+  </div>
+</div>
+<div class="main">
+  <div class="productos">
+    <h2>Productos disponibles actualmente</h2>
+    <div class="prod" *ngFor="let producto of productos">
+      <div class="pr">
+        {{ producto.nombre }} - ${{ producto.precio }}
+        <p>{{producto.descripcion}}</p>
+      </div>
+
+      <div class="btn1">
+        <button
+          class="btn2eliminar"
+          (click)="eliminarProducto(producto.idproducto)"
+        >
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pedidos">
+    <h2>Pedidos</h2>
+    <div class="pedidos2">
+      <p *ngFor="let pedido of pedidos">
+        <button [routerLink]="['/pedidodetalle', pedido.id]">
+          Pedido: {{ pedido.folio }} ({{ pedido.fecha }} {{ pedido.hora }})
+        </button>
+      </p>
+
+      <div *ngIf="detallesSeleccionados.length > 0">
+        <h3>Detalles del pedido:</h3>
+        <ul>
+          <li *ngFor="let detalle of detallesSeleccionados">
+            {{ detalle.nombre }} - ${{ detalle.precio }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

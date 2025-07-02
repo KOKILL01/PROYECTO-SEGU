@@ -1,0 +1,24 @@
+<div class="header"> <!--header------------------->
+
+    <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo">
+  </div>
+    <div class="titulo">
+        <p>Press Start
+        </p>
+    </div>
+    <div class="botones">
+        <button class="btn" routerLink="/nptienda"><img class="icon" src="nprod.png" alt=""></button>
+        
+    </div>
+
+</div>
+
+<div class="main">
+    <h2>Productos disponibles</h2>
+    <div class="prod" *ngFor="let prod of productos">
+        {{prod.nombre}}
+
+        <button class="bt" (click)="anadirProducto(prod)">añadir</button>
+    </div>
+</div>

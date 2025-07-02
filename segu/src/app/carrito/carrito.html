@@ -1,0 +1,55 @@
+<div class="header">
+  <!--header------------------->
+
+  <div class="logo">
+    <img class="l" src="logo.gif" alt="Logo" />
+  </div>
+  <div class="titulo">
+    <p>Press Start</p>
+  </div>
+  <div class="botones">
+    <button class="btn" routerLink="/home">
+      <img class="icon" src="hogar.png" alt="" />
+    </button>
+    <p class="btn">btn3</p>
+  </div>
+</div>
+
+<div class="main">
+  <h1>TUS PRODUCTOS</h1>
+
+  <div class="main2">
+    <div class="prod">
+      <div class="p" *ngFor="let producto of carrito; let i = index">
+        <p>{{ producto.nombre }}</p>
+        <p>${{ producto.precio }}</p>
+
+        <label for="tienda-{{i}}">Seleccionar sucursal:</label>
+
+        <div class="pap">
+          <select class="pp1" id="tienda-{{i}}" [(ngModel)]="carrito[i].tiendaSeleccionada">
+            <option *ngFor="let tienda of producto.tiendas" [value]="tienda">
+              {{ tienda }}
+            </option>
+          </select>
+
+          <button class="pp1" (click)="eliminarDelCarrito(i)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mandar">
+      <div class="m">
+        <div class="p2">
+          <h1>Total: ${{ total }}</h1>
+        </div>
+        <div class="p2">
+          <h2>Folio: #{{folio}}</h2>
+        </div>
+        <div class="p2">
+          <button (click)="ordenar()">ORDENAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

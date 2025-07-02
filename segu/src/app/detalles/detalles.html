@@ -1,0 +1,79 @@
+<div class="header"> <!--header------------------->
+
+    <div class="logo">
+        <img class="l" src="logo.gif" alt="Logo">
+    </div>
+    <div class="titulo">
+        <p>Press Start
+        </p>
+    </div>
+    <div class="botones">
+        <button class="btn" routerLink="/home"><img class="icon" src="hogar.png" alt=""></button>
+        <button class="btn" routerLink="/carrito"><img class="icon" src="car.png" alt=""></button>
+        <p class="btn">btn3</p>
+    </div>
+
+</div>
+
+
+<div class="main">
+
+    <div class="imagen">
+
+        <div class="image">
+            <img *ngIf="producto" class="im" [src]="producto.imagen" alt="">
+        </div>
+
+    </div>
+
+    <div class="detalles" *ngIf="producto">
+        <div class="detall">
+            <div class="titu">
+                <h1>{{producto.nombre}}</h1>
+            </div>
+            <div class="text">
+                <p>{{producto.descripcion}}</p>
+            </div>
+            <div class="precio">
+                <h2>${{producto.precio}}</h2>
+            </div>
+        </div> <br>
+
+        <div class="detall">
+            <p>Selecciona sucursal</p>
+            <select name="sucursales" id="sucursales">
+                <option value="cliente" *ngFor="let tiendas of tienda">{{tiendas}}</option>
+            </select>
+
+            <button class="bt10" (click)="anadirCarrito()">Añadir al carrito</button>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+<div class="comentarios">
+    <h2>Comentarios</h2>
+    <div class="pubcom">
+        Comentar
+        <form (ngSubmit)="subir()">
+            <div class="inp">
+                <input class="escribir" type="text" name="comentario" [(ngModel)]="coment"
+                    placeholder="Publica Tu Comentario"> <br>
+                <button>Subir</button>
+            </div>
+        </form>
+
+
+
+        <div class="compublicos">
+
+            <div class="com" *ngFor="let comentario of comentarios">
+                <p>{{comentario.comentario}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa logo y botones */
+  background-color: #2d78a7;
+  height: 10vh; /* 10% de la altura de la pantalla */
+  padding: 0 20px;
+  position: relative;
+  margin: 10px;
+}
+
+.logo {
+  width: 15%;
+}
+
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.botones {
+  color: white;
+  display: flex;
+}
+
+.btn {
+  margin: 2px;
+  border: 1px solid rgb(12, 80, 176);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.icon {
+  background-color: transparent;
+  height: 30px; /* o el tamaño que quieras */
+  width: auto;
+  mix-blend-mode: multiply;
+}
+.l {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* o 'cover' según lo que prefieras */
+}
+
+.main {
+  background-color: #2d78a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70vh; /* Ocupa toda la pantalla */
+}
+
+.imagen {
+  border: solid black 1px;
+  background-color: #77a9c9;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  
+}
+
+.image {
+  padding: 5px;
+  border:solid black 1px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a9cce2;
+  aspect-ratio: 1 / 1;
+  
+}
+.im {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Para que no se deforme */
+  aspect-ratio: 1 / 1;
+}
+
+.detalles {
+  border: solid black 1px;
+  background-color: #77a9c9;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt10{
+  margin:10px;
+  padding: 5px;
+  border-radius: 4px;
+  
+}
+
+.detall {
+  padding: 4%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  background-color: #a9cce2;
+  width: 50%;
+  height: auto;
+}
+
+.comentarios {
+  margin-top: 1%;
+  width: auto;
+  height: auto;
+  background-color: #77a9c9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pubcom {
+  padding: 2%;
+  background-color: #a9cce2;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+}
+
+.inp {
+  height: 12vh;
+  justify-content: center;
+}
+.escribir {
+  height: 100%;
+  padding: 10px;
+  width: 40%;
+}
+
+.compublicos {
+  height: auto;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+.com {
+  background-color: #d1edff;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+}
+

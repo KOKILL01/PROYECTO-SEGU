@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa logo y botones */
+  background-color: #2d78a7;
+  height: 10vh; /* 10% de la altura de la pantalla */
+  padding: 0 20px;
+  position: relative;
+  margin: 10px;
+}
+
+.logo {
+  
+  width: 15%;
+}
+
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  color: rgb(6, 9, 39); /* Color neón base */
+      text-shadow:
+        0 10px 50px rgb(119, 245, 241),
+        0 0 10px rgb(42, 255, 230),
+        0 0 20px rgb(0, 242, 255),
+        0 0 40px #0ff,
+        10px 10px 80px rgb(239, 1, 1);
+      animation: parpadeo 1.5s infinite alternate;
+  
+}
+
+.botones {
+  color: white;
+  display: flex;
+}
+
+.btn {
+  margin: 2px;
+  border:1px solid rgb(12, 80, 176);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.icon{
+  background-color: transparent;
+  height: 30px; /* o el tamaño que quieras */
+  width: auto;
+  mix-blend-mode: multiply;
+}
+.l {
+  border-radius: 10px;
+  height: 90%;
+  width: 90%;
+  object-fit: contain; /* o 'cover' según lo que prefieras */
+}
+
+.main{
+    background-color: #a9cce2;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    min-height: 60vh;
+    display: flex;
+    flex: auto;
+}
+
+.productos{
+    margin: 5px;
+    min-height: 100%;
+    background-color: #77a9c9;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+}
+
+.prod{
+    margin: 5px;
+    background-color: #d1edff;
+    height: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.pr{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+.btn1{
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn2eliminar{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+     background-color: #d1edff;
+}
+
+
+
+
+.pedidos{
+    margin: 5px;
+    width: 50%;
+    min-height: 100%;
+    background-color: #77a9c9;
+    display: flex;
+    flex-direction: column;
+  align-items: center;  
+}
+
+.pedidos2{
+   background-color: #a9cce2;
+  width: 70%;
+  
+}

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa logo y botones */
+  background-color: #2d78a7;
+  height: 10vh; /* 10% de la altura de la pantalla */
+  padding: 0 20px;
+  position: relative;
+  margin: 10px;
+  border: solid black 1px;
+}
+
+.logo {
+  
+  width: 15%;
+}
+
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  color: rgb(6, 9, 39); /* Color neón base */
+      text-shadow:
+        0 10px 50px rgb(119, 245, 241),
+        0 0 10px rgb(42, 255, 230),
+        0 0 20px rgb(0, 242, 255),
+        0 0 40px #0ff,
+        10px 10px 80px rgb(239, 1, 1);
+      animation: parpadeo 1.5s infinite alternate;
+  
+}
+
+.botones {
+  color: white;
+  display: flex;
+  
+}
+
+.btn {
+  margin: 2px;
+  border:1px solid rgb(12, 80, 176);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  
+}
+.icon{
+  background-color: transparent;
+  height: 30px; /* o el tamaño que quieras */
+  width: auto;
+  mix-blend-mode: multiply;
+  
+}
+
+.l {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* o 'cover' según lo que prefieras */
+}
+
+.main{
+    background-color: #77a9c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 85vh;
+  border: solid black 1px;
+}
+
+.ped{
+    background-color: #a9cce2;
+    width: 40%;
+    min-height: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  border: solid black 1px;
+}
+
+.pedt{
+  margin: auto;
+  background-color: #d1edff;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black 1px;
+}
+.pedtable{
+  width: 70%;
+  text-align: center;
+  margin: auto;background-color: #d1edff;
+  height: 50%;
+  border-radius: 5px;
+  
+  border: solid black 1px;
+}
+
+.tot{
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  background-color: #d1edff;
+  border-radius: 5px;
+  border: solid black 1px;
+}
+
