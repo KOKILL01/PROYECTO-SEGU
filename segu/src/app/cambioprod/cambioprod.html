@@ -5,7 +5,7 @@
   <div class="titulo">Press Start</div>
   
   <div class="botones">
-    <div class="btn" routerLink="/adminP"><img class="icon" src="volver.png" alt=""></div>
+    <a href="/adminP"><div class="btn"><img class="icon" src="volver.png" alt=""></div></a>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 
     <div class="recuadro">
       <label>Nombre:</label>
-      <input type="text" [(ngModel)]="producto.nombre">
+      <input type="text" [(ngModel)]="producto.nombre" >
     </div>  
     <div class="recuadro">
       <label>Precio:</label>

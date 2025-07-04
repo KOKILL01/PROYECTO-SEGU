@@ -20,6 +20,7 @@ import { Nptienda } from './nptienda/nptienda';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { CambioprodComponent } from './cambioprod/cambioprod';
 import { PedidodetalleComponent } from './pedidodetalle/pedidodetalle';
+import { Pu } from './pu/pu';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PedidodetalleComponent } from './pedidodetalle/pedidodetalle';
     Tienda,
     
     Nptienda,
+          Pu,
     
   ],
   imports: [

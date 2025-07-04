@@ -5,7 +5,7 @@
   <div class="titulo">Press Start</div>
   
   <div class="botones">
-    <div class="btn" routerLink="/adminP"><img class="icon" src="volver.png" alt=""></div>
+    <a href="/adminP"><div class="btn"><img class="icon" src="volver.png" alt=""></div></a>
   </div>
 </div>
 
@@ -15,22 +15,22 @@
     <h1>Añadir usuario</h1>
 
     <div class="recuadro">
-      <input type="text" name="CorreoEmpleado" [(ngModel)]="correo" placeholder="Correo" />
+      <input type="email" name="CorreoEmpleado" [(ngModel)]="correo" placeholder="Correo" required />
     </div> 
 
     <div class="recuadro">
-      <input type="text" name="nombreEmpleado" [(ngModel)]="nombre" placeholder="Nombre" />
+      <input type="text" name="nombreEmpleado" [(ngModel)]="nombre" placeholder="Nombre" required/>
     </div> 
 
     <div class="recuadro">
-      <input type="text" name="pass" [(ngModel)]="contra" placeholder="Contraseña" />
+      <input type="password" name="pass" [(ngModel)]="contra" placeholder="Contraseña" required/>
     </div>
 
 
     
     <div class="recuadro">
       <label for="tipos">Elige tipo de usuario</label>
-      <select name="usuarios" id="tipos" [(ngModel)]="rol">
+      <select name="usuarios" id="tipos" [(ngModel)]="rol" required>
         <option value="cliente">Cliente</option>
         <option value="empleado">Empleado de sucursal</option>
         <option value="administrador">Administrador Global</option>

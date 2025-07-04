@@ -15,11 +15,11 @@
     <h1>Inicia Sesión</h1>
 
     <div class="recuadro">
-      <input type="text" name="email" [(ngModel)]="correo"  placeholder="Correo Electronico" />
+      <input type="email" name="email" [(ngModel)]="correo"  placeholder="Correo Electronico" required/>
     </div> 
 
     <div class="recuadro">
-      <input type="text" name="pass" [(ngModel)]="pass" placeholder="Contraseña" />
+      <input type="password" name="pass" [(ngModel)]="pass" placeholder="Contraseña" required/>
     </div>
 
     <button type="submit" class="btnEntrar">Entrar</button>

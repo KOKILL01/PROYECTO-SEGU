@@ -11,6 +11,9 @@ import { Storage } from '@ionic/storage-angular';
 
 import { environment } from '../../environments/environment';
 
+import { firstValueFrom } from 'rxjs';
+
+
 const helper = new JwtHelperService();
 const TOKEN_KEY = 'jwt-token';
 
@@ -31,9 +34,8 @@ export class AuthService {
     private http: HttpClient,
     private storage: Storage,
     private router: Router,
-    private ptl: Platform
-  ) //private userService: UserService,
-  {
+    private ptl: Platform //private userService: UserService,
+  ) {
     this.ptl.ready().then(async () => {
       await this.inicializateStorage();
       this.loadStoredToken(); // Ahora sí carga el token después de crear la base
@@ -98,6 +100,42 @@ export class AuthService {
     }
   }
 
+  async obtenerMisPedidos(): Promise<any[]> {
+  const token = await this.getToken();
+
+  if (!token) {
+    throw new Error('No token disponible');
+  }
+
+  const headers = new HttpHeaders({
+    Authorization: `Bearer ${token}`,
+  });
+
+  const observable = this.http.get<any[]>(`${this.baseURL}/misPedidos`, { headers });
+  const pedidos = await firstValueFrom(observable);
+  return pedidos;
+}
+
+  checkTokenConHeader(): Promise<boolean> {
+    return this.getToken().then((token) => {
+      if (!token) return false;
+      const headers = new HttpHeaders({
+        Authorization: `Bearer ${token}`,
+      });
+
+      return this.http
+        .get<{ valido: boolean }>(`${this.baseURL}/checkToken`, { headers })
+        .toPromise()
+        .then((resp) => {
+          if (resp && typeof resp.valido !== 'undefined') {
+            return resp.valido;
+          }
+          return false;
+        })
+        .catch(() => false);
+    });
+  }
+
   async logout() {
     try {
       await this.storage.remove(TOKEN_KEY);
@@ -125,16 +163,15 @@ export class AuthService {
     );
   }
 
-
   // Obtener todos los pedidos por tienda
-obtenerPedidos(idtienda: number) {
-  return this.http.get<any[]>(`${this.baseURL}/pedidos/${idtienda}`);
-}
+  obtenerPedidos(idtienda: number) {
+    return this.http.get<any[]>(`${this.baseURL}/pedidos/${idtienda}`);
+  }
 
-// Obtener detalles por ID de pedido
-obtenerDetallesPedido(idpedido: number) {
-  return this.http.get<any[]>(`${this.baseURL}/detallesPedido/${idpedido}`);
-}
+  // Obtener detalles por ID de pedido
+  obtenerDetallesPedido(idpedido: number) {
+    return this.http.get<any[]>(`${this.baseURL}/detallesPedido/${idpedido}`);
+  }
 
   /**
   async resetPassword(email: string) {

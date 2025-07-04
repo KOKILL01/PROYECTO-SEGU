@@ -12,6 +12,7 @@ import { Userempleado } from './userempleado/userempleado';
 import { Nptienda } from './nptienda/nptienda';
 import { CambioprodComponent } from './cambioprod/cambioprod';
 import { PedidodetalleComponent } from './pedidodetalle/pedidodetalle';
+import { Pu } from './pu/pu';
 
 const routes: Routes = [
   {
@@ -52,6 +53,9 @@ const routes: Routes = [
   },
   {
     path:'pedidodetalle/:id', component: PedidodetalleComponent
+  },
+  {
+    path:'pu', component: Pu
   }
 ];
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Api } from '../servicios/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-p',
@@ -10,7 +11,7 @@ import { Api } from '../servicios/api';
 export class AdminP {
 productos: any[] = [];
 
-  constructor(private api: Api) {}
+  constructor(private api: Api, private router:Router) {}
 
   ngOnInit(): void {
     this.api.obtenerProductos().subscribe({
@@ -21,5 +22,14 @@ productos: any[] = [];
         console.error("Error al obtener productos", err);
       }
     });
+  }
+
+  salir(){
+    if (confirm('¿Seguro que deseas cerrar sesion?')) {
+      
+          alert('Sesion cerrada');
+          this.router.navigateByUrl('/home',{replaceUrl:true});
+        
+    }
   }
 }

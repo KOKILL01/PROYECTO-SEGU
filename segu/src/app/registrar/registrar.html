@@ -16,13 +16,13 @@
     <h1>Registrare!</h1>
 
     <div class="recuadro">
-      <input name="email"  type="text" [(ngModel)]="correo" placeholder="Correo electronico" />
+      <input name="email"  type="email" [(ngModel)]="correo" placeholder="Correo electronico" required/>
     </div>
     <div class="recuadro">
-      <input name="Nombre"  type="text" [(ngModel)]="nombre" placeholder="Nombre de usuario" />
+      <input name="Nombre"  type="text" [(ngModel)]="nombre" placeholder="Nombre de usuario" required/>
     </div>
     <div class="recuadro">
-      <input name="contraseña"  type="text" [(ngModel)]="contra" placeholder="Contraseña" />
+      <input name="contraseña"  type="password" [(ngModel)]="contra" placeholder="Contraseña" required/>
     </div>
 
 
